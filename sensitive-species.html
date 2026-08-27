@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A work-in-progress dataset documenting current and historical restrictions on sensitive species data.">
+  <title>Sensitive species data restrictions — Martin Kaehrle</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="site-header"><a class="monogram" href="index.html" aria-label="Home"><img src="assets/header-whimbrel.png" alt=""><span aria-hidden="true">M</span></a><nav><a href="about.html">About</a><a href="publications.html">Publications</a></nav></header>
+<main class="page article-page">
+  <a class="back" href="index.html">← Home</a>
+  <p class="page-label">Dataset · Work in progress</p>
+  <h1>Sensitive species data restrictions</h1>
+  <div class="article-grid">
+    <div>
+      <p class="lede">A work-in-progress dataset documenting current and historical restrictions on sensitive species data.</p>
+      <p class="dataset-stat"><strong data-dataset-field="restrictions_display">300,000+</strong><span>documented restrictions in the current draft</span></p>
+      <p class="dataset-stat"><strong data-dataset-field="providers">47</strong><span>biodiversity data providers represented</span></p>
+      <p class="dataset-stat"><strong data-dataset-field="date_span">2007–2026</strong><span>date span represented</span></p>
+      <p class="snapshot-meta">Draft snapshot · <span data-dataset-field="updated_display">August 2026</span></p>
+    </div>
+    <div class="prose">
+      <p>This work-in-progress dataset compiles publicly available information from several dozen biodiversity data providers that have implemented automatic data access restrictions for sensitive species occurrence data. Its focus is solely automatic restrictions for designated sensitive species; discretionary restrictions fall outside its scope.</p>
+      <p>The core unit of the dataset is a <em>restriction</em>: a treatment such as generalization applied to data about a particular taxon under certain geographic or temporal conditions. A restriction may be documented by one or more <em>restriction observations</em>, instances in which a source confirms that the restriction remains in place. If a species is delisted, the restriction lapses. If restrictions are later reinstated, they are recorded as new restrictions. A change to the treatment or geographic scope also creates a new restriction.</p>
+      <p>The dataset supports comparisons of how data providers treat sensitive species information across taxonomy, geography, and time. It can be used to examine which taxa are commonly restricted, which treatments or rationales are most prevalent, how practices differ across providers, and how individual providers’ practices develop over time.</p>
+      <p>We harmonized data from sources including published static lists, biodiversity portal APIs, and dynamic lists such as species filters in participatory science platforms. Collection methods ranged from direct data downloads to custom web-crawling applications.</p>
+      <p>We will publish the dataset tables in addition to all supporting code, allowing users to obtain the raw data if desired through our ingestion pipeline. We have archived sources using the Wayback Machine where possible and drawn on existing Wayback captures for historical comparisons.</p>
+      <p>A public portal may eventually provide one way to explore a released version of the dataset.</p>
+    </div>
+  </div>
+
+  <section class="anatomy" data-anatomy data-mode="restriction">
+    <div class="anatomy-heading">
+      <div><p class="label">How the dataset works</p><h2>Anatomy of a restriction</h2></div>
+      <div class="anatomy-controls" aria-label="Choose an explanatory view">
+        <button type="button" data-anatomy-mode="restriction" aria-pressed="true">Restriction</button>
+        <button type="button" data-anatomy-mode="observations" aria-pressed="false">Observations</button>
+      </div>
+    </div>
+    <div class="anatomy-record">
+      <div class="anatomy-record-top"><span>Illustrative record</span><strong>Restriction R-001</strong></div>
+      <div class="identity-fields">
+        <div><small>Provider</small><strong>Example platform</strong></div>
+        <div><small>Taxon</small><strong>Taxon A</strong></div>
+        <div><small>Geography</small><strong>Region 1</strong></div>
+        <div><small>Treatment</small><strong>Generalize to 10 km</strong></div>
+        <div><small>Season</small><strong>1 March–31 August</strong></div>
+      </div>
+      <div class="observation-history">
+        <span class="observation-line" aria-hidden="true"></span>
+        <div><i></i><small>2019</small><strong>List v1 confirms R-001</strong></div>
+        <div><i></i><small>2022</small><strong>List v2 confirms R-001</strong></div>
+        <div><i></i><small>2025</small><strong>List v3 confirms R-001</strong></div>
+      </div>
+      <div class="new-restriction"><span><small>2026 source · List v4</small>Season changes to 1 April–31 July</span><strong>New restriction → R-002</strong></div>
+    </div>
+    <div class="anatomy-explanation" aria-live="polite"><strong data-anatomy-title>Restriction records</strong><p data-anatomy-text>Provider, taxon, geography, and treatment (including seasonal or conditional terms) define the restriction. A change to the treatment or geographic scope creates a new restriction.</p></div>
+  </section>
+</main>
+<footer><span class="footer-identity"><span>Martin Kaehrle</span><a href="https://github.com/mkaehrle" target="_blank" rel="noreferrer">GitHub profile ↗</a></span><span class="footer-links"><time data-site-updated datetime="2026-08-26">Updated August 2026</time></span></footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
